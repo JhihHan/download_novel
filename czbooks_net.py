@@ -22,7 +22,7 @@ from urllib.parse import urljoin
 from tqdm import tqdm
 
 def fetch_chapter_links(url):
-    headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact)'}
+    headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact) yourmail@gmail.com'}
     response = requests.get(url, headers=headers)
     response.encoding = 'utf-8'
 
@@ -45,7 +45,7 @@ def fetch_chapter_links(url):
     return novel_name, chapter_links
 
 def fetch_article_content(url):
-    headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact)'}
+    headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact) yourmail@gmail.com'}
     response = requests.get(url, headers=headers)
     response.encoding = 'utf-8'
 
