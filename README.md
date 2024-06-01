@@ -15,7 +15,8 @@ from tqdm import tqdm
 處理檔名和章節連結
 ```python=
 def fetch_chapter_links(url):
-    headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact)'}
+    #可聯繫網站網址或信箱，'YourBotName/1.0 (yourmail@gmail.com)' or 'YourBotName/1.0 (+http://yourwebsite.com/contact)' or 以下
+    headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact) yourmail@gmail.com'}
     response = requests.get(url)
     response.encoding = 'utf-8'
 
@@ -40,7 +41,8 @@ def fetch_chapter_links(url):
 下載章節內容
 ```python=
 def fetch_article_content(url):
-    headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact)'}
+    #可聯繫網站網址或信箱，'YourBotName/1.0 (yourmail@gmail.com)' or 'YourBotName/1.0 (+http://yourwebsite.com/contact)' or 以下
+    headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact) yourmail@gmail.com'}
     response = requests.get(url)
     response.encoding = 'utf-8'
 
