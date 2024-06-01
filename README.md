@@ -4,14 +4,18 @@
 ### 程式碼 czbooks_net.py
 導入特定函數
 ```python=
+import os
 import time
+import random
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
+from tqdm import tqdm
 ```
 處理檔名和章節連結
 ```python=
 def fetch_chapter_links(url):
+    headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact)'}
     response = requests.get(url)
     response.encoding = 'utf-8'
 
@@ -36,6 +40,7 @@ def fetch_chapter_links(url):
 下載章節內容
 ```python=
 def fetch_article_content(url):
+    headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact)'}
     response = requests.get(url)
     response.encoding = 'utf-8'
 
@@ -56,6 +61,7 @@ def fetch_article_content(url):
 儲存檔案
 ```python=
 def save_to_txt(content, filename):
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, 'w', encoding='utf-8') as file:
         file.write(content)
         file.write('\n\n')
