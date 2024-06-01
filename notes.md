@@ -1,6 +1,6 @@
 # 下載網站小說
-## 小說狂人
-### 程式碼
+## 小說狂人 czbooks.net
+### 程式碼 czbooks_net.py
 導入特定函數
 ```python=
 import time
