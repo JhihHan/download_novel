@@ -88,12 +88,12 @@ if __name__ == "__main__":
 ### 實際操作
 1.至小說網站選擇要下載的小說
 
-![image](https://hackmd.io/_uploads/HyAyHUON0.png)
+![image](https://github.com/JhihHan/download_novel/assets/117454279/486b2997-d7f8-4804-ab41-29ef2a256ba3)
 
 2.複製小說網址
 
-![image](https://hackmd.io/_uploads/SJ5Kr8uVR.png)
+![image](https://github.com/JhihHan/download_novel/assets/117454279/d5507306-5aa8-4f6d-a043-aa2ad6fbb290)
 
 3.將網址貼至49行''內 -> 4.開始執行 -> 5.下載進度 -> 6.下載結果
 
-![image](https://hackmd.io/_uploads/Sy0TnIdVC.png)
+![image](https://github.com/JhihHan/download_novel/assets/117454279/7e72e3cc-4aef-455e-8360-3d053d08c683)
