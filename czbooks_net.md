@@ -94,6 +94,6 @@ if __name__ == "__main__":
 
 ![image](https://github.com/JhihHan/download_novel/assets/117454279/d5507306-5aa8-4f6d-a043-aa2ad6fbb290)
 
-3.將網址貼至49行''內 -> 4.開始執行 -> 5.下載進度 -> 6.下載結果
+3.將網址貼至base_url行''內 -> 4.開始執行 -> 5.下載進度 -> 6.下載結果
 
 ![image](https://github.com/JhihHan/download_novel/assets/117454279/7e72e3cc-4aef-455e-8360-3d053d08c683)
