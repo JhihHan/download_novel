@@ -1,6 +1,6 @@
 # 下載網站小說
 -個人是將載好的txt檔案，匯到輕鬆讀小說APP的書櫃
-## 小說狂人 czbooks.net
+## 小說狂人 [link](https://czbooks.net)
 ### 程式碼 czbooks_net.py
 導入特定函數
 ```python=
