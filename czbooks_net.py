@@ -2,6 +2,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
+from tqdm import tqdm
 
 def fetch_chapter_links(url):
     response = requests.get(url)
@@ -17,7 +18,7 @@ def fetch_chapter_links(url):
     chapter_links = []
     chapter_list = soup.find('ul', class_='nav chapter-list', id='chapter-list')
     if chapter_list:
-        for a_tag in chapter_list.find_all('a', href=True):
+        for a_tag in tqdm(chapter_list.find_all('a', href=True), desc="Downloading chapters"):
             chapter_url = urljoin(url, a_tag['href'])
             chapter_links.append(chapter_url)
     
