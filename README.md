@@ -81,7 +81,7 @@ def main():
         formatted_text = '\n\n'.join(lines)
 
         save_to_txt(formatted_text, filename)
-        time.sleep(0.2)
+        time.sleep(random.uniform(1, 3))
     
     print(f'Download of {novel_name} completed!')
 
