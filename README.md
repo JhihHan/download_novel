@@ -58,6 +58,7 @@ def fetch_article_content(url):
 def save_to_txt(content, filename):
     with open(filename, 'w', encoding='utf-8') as file:
         file.write(content)
+        file.write('\n\n')
 ```
 主函數
 ```python=
@@ -65,23 +66,18 @@ def main():
     base_url = '' #小說網址
     novel_name, chapter_links = fetch_chapter_links(base_url)
 
-    all_content = []
+    filename = novel_name.strip().replace(" ", "_").replace("/", "_")+'.txt'
 
-    for chapter_url in chapter_links:
+    for chapter_url in tqdm(chapter_links, desc="Downloading chapters"):
         article_text = fetch_article_content(chapter_url)
-
+        
         lines = article_text.split('\n')
         formatted_text = '\n\n'.join(lines)
-        all_content.append(formatted_text)
 
-        time.sleep(1)
+        save_to_txt(formatted_text, filename)
+        time.sleep(0.2)
     
-    full_text = '\n\n'.join(all_content)
-    
-    filename = novel_name.strip().replace(' ', '_').replace('/', '_') + '.txt'
-
-    save_to_txt(full_text, filename)
-    print(f'Saved novel to {filename}')
+    print(f'Download of {novel_name} completed!')
 
 if __name__ == "__main__":
     main()
