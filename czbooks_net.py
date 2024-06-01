@@ -18,7 +18,7 @@ def fetch_chapter_links(url):
     chapter_links = []
     chapter_list = soup.find('ul', class_='nav chapter-list', id='chapter-list')
     if chapter_list:
-        for a_tag in tqdm(chapter_list.find_all('a', href=True), desc="Downloading chapters"):
+        for a_tag in chapter_list.find_all('a', href=True):
             chapter_url = urljoin(url, a_tag['href'])
             chapter_links.append(chapter_url)
     
@@ -51,7 +51,7 @@ def main():
 
     all_content = []
 
-    for chapter_url in chapter_links:
+    for chapter_url in tqdm(chapter_links, desc="Downloading chapters"):
         article_text = fetch_article_content(chapter_url)
 
         lines = article_text.split('\n')
