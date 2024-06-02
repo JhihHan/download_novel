@@ -20,7 +20,7 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 from tqdm import tqdm
-from opencc import OpenCC
+from opencc import OpenCC  #pip install opencc-python-reimplemented
 
 headers = {'User-Agent': 'Download_the_novel_and_read_it_myself/1.0 (su395014um@gmail.com)'}
 cc = OpenCC('s2twp')
