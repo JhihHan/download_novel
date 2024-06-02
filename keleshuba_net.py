@@ -22,7 +22,7 @@ from urllib.parse import urljoin
 from tqdm import tqdm
 from opencc import OpenCC  #pip install opencc-python-reimplemented
 
-headers = {'User-Agent': 'Download_the_novel_and_read_it_myself/1.0 (su395014um@gmail.com)'}
+headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact) yourmail@gmail.com'}
 cc = OpenCC('s2twp') #簡轉繁 | 't2s'為繁轉簡
 
 def fetch_chapter_links(url):
