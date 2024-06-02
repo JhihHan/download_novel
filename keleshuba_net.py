@@ -23,7 +23,7 @@ from tqdm import tqdm
 from opencc import OpenCC  #pip install opencc-python-reimplemented
 
 headers = {'User-Agent': 'Download_the_novel_and_read_it_myself/1.0 (su395014um@gmail.com)'}
-cc = OpenCC('s2twp')
+cc = OpenCC('s2twp') #簡轉繁 | 't2s'為繁轉簡
 
 def fetch_chapter_links(url):
     response = requests.get(url, headers=headers)
@@ -80,7 +80,7 @@ def save_to_txt(content, filename):
         file.write('\n\n')
 
 def main():
-    base_url = 'https://www.keleshuba.net/book/207943/'
+    base_url = ''
     novel_name, chapter_links = fetch_chapter_links(base_url)
 
     filename = f'《{novel_name.strip().replace(" ", "_").replace("/", "_")}》.txt'
