@@ -21,8 +21,9 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 from tqdm import tqdm
 
+headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact) yourmail@gmail.com'}
+
 def fetch_chapter_links(url):
-    headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact) yourmail@gmail.com'}
     response = requests.get(url, headers=headers)
     response.encoding = 'utf-8'
 
@@ -45,7 +46,6 @@ def fetch_chapter_links(url):
     return novel_name, chapter_links
 
 def fetch_article_content(url):
-    headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact) yourmail@gmail.com'}
     response = requests.get(url, headers=headers)
     response.encoding = 'utf-8'
 
@@ -69,11 +69,11 @@ def save_to_txt(content, filename):
         file.write('\n\n')
 
 def main():
-    base_url = 'https://czbooks.net/n/s6gd5e66'
+    base_url = ''
     novel_name, chapter_links = fetch_chapter_links(base_url)
 
     # 文件名使用小说名称
-    filename = f'/content/drive/MyDrive/novel/{novel_name.strip().replace(" ", "_").replace("/", "_")}.txt'
+    filename = novel_name.strip().replace(" ", "_").replace("/", "_")+' .txt'
 
     for chapter_url in tqdm(chapter_links, desc="Downloading chapters"):
         article_text = fetch_article_content(chapter_url)
@@ -84,7 +84,7 @@ def main():
         save_to_txt(formatted_text, filename)
 
         # 设置随机延迟
-        time.sleep(random.uniform(1, 3))
+        time.sleep(random.uniform(0.5, 1))
 
     print(f'\nDownload of {novel_name} completed!')
 
