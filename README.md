@@ -69,7 +69,7 @@ def save_to_txt(content, filename):
         file.write(content)
         file.write('\n\n')
 ```
-主函數
+> 主函數
 ```python=
 def main():
     base_url = '' #小說網址
