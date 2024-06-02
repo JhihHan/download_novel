@@ -4,9 +4,9 @@
 > 個人是將載好的txt檔案，匯到輕鬆讀小說APP的書櫃
 
 > headers:
-> 'YourBotName/1.0 (yourmail@gmail.com)'
-> 'YourBotName/1.0 (+http://yourwebsite.com/contact)'
-> 'YourBotName/1.0 (+http://yourwebsite.com/contact) yourmail@gmail.com'
+'YourBotName/1.0 (yourmail@gmail.com)'
+'YourBotName/1.0 (+http://yourwebsite.com/contact)'
+'YourBotName/1.0 (+http://yourwebsite.com/contact) yourmail@gmail.com'
 
 ## 可樂小說網 [keleshuba.net](https://www.keleshuba.net/)
 ### 程式碼 [link](https://github.com/JhihHan/download_novel/blob/main/keleshuba_net.py)
@@ -88,11 +88,11 @@ def save_to_txt(content, filename):
 > 主函數
 ```python=
 def main():
-    base_url = 'https://www.keleshuba.net/book/231641/'
+    base_url = ''
     novel_name, chapter_links = fetch_chapter_links(base_url)
 
     # 文件名使用小说名称
-    filename = f'/content/drive/MyDrive/novel/《{novel_name.strip().replace(" ", "_").replace("/", "_")}》.txt'
+    filename = f'《{novel_name.strip().replace(" ", "_").replace("/", "_")}》.txt'
 
     for chapter_url in tqdm(chapter_links, desc="Downloading chapters"):
         article_text = fetch_article_content(chapter_url)
@@ -105,7 +105,7 @@ def main():
         # 设置随机延迟
         time.sleep(random.uniform(0.5, 1))
 
-    print(f'\nDownload of {novel_name} completed!')
+    print(f'\nDownload of 《{novel_name}》 completed!')
 
 if __name__ == "__main__":
     main()
