@@ -11,12 +11,13 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 from tqdm import tqdm
+
+#可聯繫網站網址或信箱，'YourBotName/1.0 (yourmail@gmail.com)' or 'YourBotName/1.0 (+http://yourwebsite.com/contact)' or 以下
+headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact) yourmail@gmail.com'}
 ```
 處理檔名和章節連結
 ```python=
-def fetch_chapter_links(url):
-    #可聯繫網站網址或信箱，'YourBotName/1.0 (yourmail@gmail.com)' or 'YourBotName/1.0 (+http://yourwebsite.com/contact)' or 以下
-    headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact) yourmail@gmail.com'}
+def fetch_chapter_links(url):   
     response = requests.get(url)
     response.encoding = 'utf-8'
 
@@ -41,8 +42,6 @@ def fetch_chapter_links(url):
 下載章節內容
 ```python=
 def fetch_article_content(url):
-    #可聯繫網站網址或信箱，'YourBotName/1.0 (yourmail@gmail.com)' or 'YourBotName/1.0 (+http://yourwebsite.com/contact)' or 以下
-    headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact) yourmail@gmail.com'}
     response = requests.get(url)
     response.encoding = 'utf-8'
 
@@ -83,7 +82,7 @@ def main():
         formatted_text = '\n\n'.join(lines)
 
         save_to_txt(formatted_text, filename)
-        time.sleep(random.uniform(1, 3))
+        time.sleep(random.uniform(0.5, 1))
     
     print(f'Download of {novel_name} completed!')
 
