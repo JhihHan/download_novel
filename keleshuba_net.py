@@ -34,12 +34,12 @@ def fetch_chapter_links(url):
 
     soup = BeautifulSoup(response.text, 'html.parser')
 
-    # 找到小说名称
+    # 小说名称
     block_txt2_div = soup.find('div', class_='block_txt2')
     name = block_txt2_div.find('h2').get_text(strip=True)
     novel_name = cc.convert(name)
 
-    # 找到所有章节链接
+    # 所有章节链接
     chapter_links = []
     chapter_list = soup.find('ul', id='allChapters2', class_='chapter')
     if chapter_list:
@@ -75,16 +75,14 @@ def fetch_article_content(url):
     return article_text_with_title
 
 def save_to_txt(content, filename):
-    os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, 'a', encoding='utf-8') as file:
         file.write(content)
         file.write('\n\n')
 
 def main():
-    base_url = ''
+    base_url = 'https://www.keleshuba.net/book/207943/'
     novel_name, chapter_links = fetch_chapter_links(base_url)
 
-    # 文件名使用小说名称
     filename = f'《{novel_name.strip().replace(" ", "_").replace("/", "_")}》.txt'
 
     for chapter_url in tqdm(chapter_links, desc="Downloading chapters"):
@@ -95,7 +93,6 @@ def main():
 
         save_to_txt(formatted_text, filename)
 
-        # 设置随机延迟
         time.sleep(random.uniform(0.5, 1))
 
     print(f'\nDownload of 《{novel_name}》 completed!')
