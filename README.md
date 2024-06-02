@@ -113,11 +113,11 @@ if __name__ == "__main__":
 ### 實際操作
 > 1.至小說網站選擇要下載的小說
 
-
+![image](https://github.com/JhihHan/download_novel/assets/117454279/b95d7632-b2f4-410a-85c8-7039dac53265)
 
 > 2.複製小說網址
 
-
+![image](https://github.com/JhihHan/download_novel/assets/117454279/c96db919-011d-4f05-8449-a64654edaafa)
 
 > 3.將網址貼至base_url行''內 -> 4.開始執行 -> 5.下載進度 -> 6.下載結果
 
