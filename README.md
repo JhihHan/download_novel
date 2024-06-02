@@ -1,4 +1,5 @@
 # 下載網站小說
+-此程式適用下載完結小說，下載的章節內容會統一存在同個txt檔
 -個人是將載好的txt檔案，匯到輕鬆讀小說APP的書櫃
 ## 小說狂人 [czbooks.net](https://czbooks.net)
 ### 程式碼 [link](https://github.com/JhihHan/download_novel/blob/main/czbooks_net.py)
