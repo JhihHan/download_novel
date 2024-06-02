@@ -3,7 +3,7 @@
 
 > 個人是將載好的txt檔案，匯到輕鬆讀小說APP的書櫃
 
-> headers:
+> headers={'User-Agent': ↓}
 > - 'YourBotName/1.0 (yourmail@gmail.com)'
 > - 'YourBotName/1.0 (+http://yourwebsite.com/contact)'
 > - 'YourBotName/1.0 (+http://yourwebsite.com/contact) yourmail@gmail.com'
