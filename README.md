@@ -3,11 +3,6 @@
 
 > 個人是將載好的txt檔案，匯到輕鬆讀小說APP的書櫃
 
-> headers={'User-Agent': ↓}
-> - 'YourBotName/1.0 (yourmail@gmail.com)'
-> - 'YourBotName/1.0 (+http://yourwebsite.com/contact)'
-> - 'YourBotName/1.0 (+http://yourwebsite.com/contact) yourmail@gmail.com'
-
 ## 可樂小說網 [keleshuba.net](https://www.keleshuba.net/)
 - **程式碼** [link](https://github.com/JhihHan/download_novel/blob/main/keleshuba_net.py)
 ### 實際操作
