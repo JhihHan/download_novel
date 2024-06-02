@@ -5,7 +5,7 @@
 
 ## 可樂小說網 [keleshuba.net](https://www.keleshuba.net/)
 - ### 程式碼 [link](https://github.com/JhihHan/download_novel/blob/main/keleshuba_net.py)
-### 實際操作
+- ### 實際操作
 > 1.至小說網站選擇要下載的小說
 
 ![image](https://github.com/JhihHan/download_novel/assets/117454279/745dac0d-b933-48d2-92ba-51ba157f5d44)
@@ -19,8 +19,8 @@
 ![image](https://github.com/JhihHan/download_novel/assets/117454279/46cfef09-fb76-4721-b2a6-524446f7ca10)
 
 ## 小說狂人 [czbooks.net](https://czbooks.net)
-- **程式碼** [link](https://github.com/JhihHan/download_novel/blob/main/czbooks_net.py)
-### 實際操作
+- ### 程式碼 [link](https://github.com/JhihHan/download_novel/blob/main/czbooks_net.py)
+- ### 實際操作
 > 1.至小說網站選擇要下載的小說
 
 ![image](https://github.com/JhihHan/download_novel/assets/117454279/486b2997-d7f8-4804-ab41-29ef2a256ba3)
