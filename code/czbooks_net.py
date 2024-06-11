@@ -61,7 +61,8 @@ def fetch_article_content(url, title):
         raise Exception("Failed to find the article content on the page")
 
     article_text = article_content_div.get_text('\n', strip=True)
-    article_text = f"{title}\n{article_text}"
+    if article_text.split('\n')[0] not in title:
+        article_text = f"{title}\n{article_text}"
     
     return article_text
 
