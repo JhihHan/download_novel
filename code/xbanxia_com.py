@@ -76,7 +76,7 @@ def main():
     novel_name, chapter_links, chapter_title = fetch_chapter_links(base_url)
 
     # 文件名使用小说名称
-    filename = f'/content/drive/MyDrive/novel/《{novel_name.strip().replace(" ", "_").replace("/", "_")}》.txt'
+    filename = f'《{novel_name.strip().replace(" ", "_").replace("/", "_")}》.txt'
     i = 0
     for chapter_url in tqdm(chapter_links, desc="Downloading chapters"):
         article_text = fetch_article_content(chapter_url, chapter_title[i])
