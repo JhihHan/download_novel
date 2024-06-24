@@ -22,6 +22,7 @@ from urllib.parse import urljoin
 from tqdm import tqdm
 
 headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact) yourmail@gmail.com'}
+base_url = ''
 
 def fetch_chapter_links(url):
     response = requests.get(url, headers=headers)
@@ -73,7 +74,6 @@ def save_to_txt(content, filename):
         file.write('\n\n')
 
 def main():
-    base_url = ''
     novel_name, chapter_links, chapter_title = fetch_chapter_links(base_url)
 
     # 文件名使用小说名称
