@@ -23,6 +23,7 @@ from tqdm import tqdm
 from opencc import OpenCC  #pip install opencc-python-reimplemented
 
 headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact) yourmail@gmail.com'}
+base_url = ''
 cc = OpenCC('s2twp') #簡轉繁 | 't2s'為繁轉簡
 
 def fetch_chapter_links(url):
@@ -80,7 +81,6 @@ def save_to_txt(content, filename):
         file.write('\n\n')
 
 def main():
-    base_url = ''
     novel_name, chapter_links = fetch_chapter_links(base_url)
 
     filename = f'《{novel_name.strip().replace(" ", "_").replace("/", "_")}》.txt'
