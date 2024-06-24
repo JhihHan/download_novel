@@ -3,6 +3,8 @@
 
 > 程式碼若有遇到問題，建議至[ps_code](https://github.com/JhihHan/download_novel/blob/main/ps_code.md)查看，也歡迎跟我提出
 
+> base_url 有改到程式碼前面，headers下一行，所以位置跟圖片有所差異
+
 ## 半夏小說 [xbanxia.com](https://www.xbanxia.com/)
 ### 程式碼 [link](https://github.com/JhihHan/download_novel/blob/main/xbanxia_com.py)
 ### 實際操作
