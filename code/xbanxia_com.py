@@ -20,6 +20,7 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 from tqdm import tqdm
+import re
 
 headers = {'User-Agent': 'YourBotName/1.0 (+http://yourwebsite.com/contact) yourmail@gmail.com'}
 base_url = ''
@@ -62,10 +63,21 @@ def fetch_article_content(url, title):
         content = content_div.get_text(separator='\n', strip=True)
         content_lines = content.split('\n')
         article_content = '\n'.join(content_lines[:-1])
-        article_text = f"{title}\n{article_content}"
+        
+        text_ = article_content.split('\n')[0]
+        if not has_chapter_number(text_):
+            if has_chapter_number(title):
+                article_text = f"{title}\n{article_content}"
+            else:
+                article_text = f"第{i}章\n{article_content}"
+        else:
+            article_text = article_content
 
     return article_text
 
+def has_chapter_number(text):
+    return bool(re.search(r'第\d+章', text))
+    
 def save_to_txt(content, filename):
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, 'a', encoding='utf-8') as file:
